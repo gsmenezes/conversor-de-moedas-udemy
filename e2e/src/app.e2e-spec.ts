@@ -1,16 +1,10 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { ConversorDeMoedasPage } from './app.po';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('conversor-de-mnoedas App', () => {
+  let page: ConversorDeMoedasPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new ConversorDeMoedasPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to conversor-de-moedas!');
   });
-
-});

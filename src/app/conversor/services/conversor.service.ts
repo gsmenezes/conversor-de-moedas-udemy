@@ -8,8 +8,11 @@ import { Conversao, ConversaoResponse } from '../models';
 })
 export class ConversorService {
 
-  //url base utilizada para conversao de moedas "http://api.fixer.io/latest"
-  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+  /**
+   * url base utilizada para conversao de moedas "http://api.fixer.io/latest"
+   * com limitacao na API por ser free, conversao feita apenas de EURO para qualquer outra moeda
+   */
+  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3&base=IDR&symbols=BRL";
 
   constructor(private http: HttpClient) { }
 
@@ -66,4 +69,5 @@ export class ConversorService {
     }
     return conversaoResponse.date;
   }
+
 }

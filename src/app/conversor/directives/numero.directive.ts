@@ -22,7 +22,7 @@ export class NumeroDirective implements ControlValueAccessor {
    * @param any $event
    */
   @HostListener('keyup', ['$event'])
-  onkeyup($event: any) {
+  onKeyup($event: any) {
     let valor = $event.target.value;
     let posDecimais = valor.indexOf('.');
 
