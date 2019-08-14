@@ -33,7 +33,7 @@ export class ConversorComponent implements OnInit {
    * @return void
    */
   init(): void {
-    this.conversao = new Conversao('USD', 'BRL', null);
+    this.conversao = new Conversao('EUR', 'BRL', null);
     this.possuiErro = false;
   }
 
