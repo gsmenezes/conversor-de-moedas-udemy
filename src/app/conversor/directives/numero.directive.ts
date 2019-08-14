@@ -2,7 +2,7 @@ import { Directive, HostListener, ElementRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Directive({
-  selector: '[Numero]',
+  selector: '[numero]',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: NumeroDirective,
