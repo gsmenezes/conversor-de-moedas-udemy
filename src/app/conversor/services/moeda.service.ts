@@ -2,16 +2,14 @@ import { Injectable } from '@angular/core';
 
 import { Moeda } from '../models';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class MoedaService {
 
   private moedas: Moeda[];
 
   constructor() { }
 
-  private moedasObj = [
+  private moedasObj = [ //http://fixer.io
     { "sigla": "AUD", "descricao": "Dólar australiano" },
     { "sigla": "BGN", "descricao": "Lev búlgaro" },
     { "sigla": "BRL", "descricao": "Real brasileiro" },
@@ -53,9 +51,9 @@ export class MoedaService {
 
     this.moedas = [];
 
-    for (let moedasObj of this.moedasObj) {
+    for (let moedaObj of this.moedasObj) {
       let moeda: Moeda = new Moeda();
-      Object.assign(moeda, moedasObj);
+      Object.assign(moeda, moedaObj);
       this.moedas.push(moeda);
     }
 
